@@ -21,11 +21,8 @@
       <button @click="addCourse">add a course</button>
       <p v-if="courses.length===0">No course</p>
       <ul v-else>
-        <li>Course</li>
-      </ul>
-      <p v-show="courses.length===0">No course</p>
-      <ul v-show="courses.length>0">
-        <li>Course</li>
+        <li v-for="c in courses">{{c}}</li>
+        <li v-for="(c,i) in courses">[{{i}}]{{c}}</li>
       </ul>
     </section>
   </body>
