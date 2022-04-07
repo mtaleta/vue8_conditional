@@ -23,6 +23,10 @@
       <ul v-else>
         <li>Course</li>
       </ul>
+      <p v-show="courses.length===0">No course</p>
+      <ul v-show="courses.length>0">
+        <li>Course</li>
+      </ul>
     </section>
   </body>
 </html>
