@@ -21,7 +21,9 @@
       <button @click="addCourse">add a course</button>
       <p v-if="courses.length===0">No course</p>
       <ul v-else>
-        <li v-for="(c,i) in courses" @click="removeCourse(i)">[{{i}}]{{c}}</li>
+        <li v-for="(c,i) in courses" @click="removeCourse(i)">
+          [{{i}}]{{c}}<input type="text" @click.stop />
+        </li>
       </ul>
       <br />
       <ul>
