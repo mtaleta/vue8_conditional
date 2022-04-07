@@ -17,10 +17,10 @@
   <body>
     <h1>conditional rendering & list</h1>
     <section id="app">
-      <input type="text" />
-      <button>add a course</button>
+      <input type="text" v-model="courseContent" />
+      <button @click="addCourse">add a course</button>
       <p v-if="courses.length===0">No course</p>
-      <ul>
+      <ul v-else>
         <li>Course</li>
       </ul>
     </section>
